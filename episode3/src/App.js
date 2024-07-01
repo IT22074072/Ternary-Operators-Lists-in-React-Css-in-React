@@ -1,5 +1,18 @@
-import './App.css';
+import "./App.css";
 
+function App() {
+  const names = ["Dini", "Pipi", "JK", "Jimin", "Jin"];
+
+  return (
+    <div className="App">
+      {names.map((name, key) => {
+        return <h1 key = {key} >{name}</h1>;
+      })}
+    </div>
+  );
+}
+
+/*
 function App() {
 
   const age = 4;
@@ -13,8 +26,7 @@ function App() {
     </div>)
 
 }
-
-
+*/
 
 /*function App() {
 
@@ -26,8 +38,6 @@ function App() {
   }
   
 }*/
-
-
 
 /*
 function App() {
