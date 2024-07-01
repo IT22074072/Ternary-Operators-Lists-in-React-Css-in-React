@@ -1,6 +1,35 @@
 import "./App.css";
 
 function App() {
+  const users = [
+    {name:"Dini", age: 21},
+    {name: "Pipi", age:26},
+    {name:"Jk", age:27},
+  ];
+
+  return (
+    <div className="App">
+      {users.map((user, key) => {
+        return <User name={user.name} age={user.age}/>
+      })}
+    </div>
+  );
+}
+
+
+//User component
+const User = (props) =>{
+
+  return(<h1>
+    {props.name} {props.age}
+  </h1>)
+  
+}
+
+
+
+/*
+function App() {
   const names = ["Dini", "Pipi", "JK", "Jimin", "Jin"];
 
   return (
@@ -10,7 +39,9 @@ function App() {
       })}
     </div>
   );
+
 }
+*/
 
 /*
 function App() {
