@@ -1,14 +1,18 @@
 import "./App.css";
-import { Planet } from "./Planet";
+import { Planet } from "./Planet";  // Importing the Planet component from the Planet file
 import { User } from "./User";
 
+
+// Defining the App component
 function App() {
+  // An array of user objects, each with a name and age property
   const users = [
     { name: "Dini", age: 21 },
     { name: "Pipi", age: 26 },
     { name: "Jk", age: 27 },
   ];
 
+  // An array of planet objects, each with a name and a boolean indicating if it's a gas planet
   const planets = [
     { name: "Mars", isGasPlanet: false },
     { name: "Earth", isGasPlanet: false },
@@ -17,6 +21,8 @@ function App() {
 
   return (
     <div className="App">
+
+      {/* Mapping over the planets array and rendering a Planet component for each gas planet */}
       {planets.map((planet, key) => {
         return planet.isGasPlanet ? <Planet key = {key} name={planet.name} isGasPlanet={planet.isGasPlanet} />: null;
       })}
