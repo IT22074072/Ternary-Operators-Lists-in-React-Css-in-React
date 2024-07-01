@@ -1,4 +1,5 @@
 import "./App.css";
+import {User} from "./User"
 
 function App() {
   const users = [
@@ -16,7 +17,7 @@ function App() {
   );
 }
 
-
+/*
 //User component
 const User = (props) =>{
 
